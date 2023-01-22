@@ -6,7 +6,8 @@ const cors=require('cors')
 let checkInData=require('./Data/CheckInData/checkIn')()
 let checkOut=require('./Data/CheckoutData/CheckoutData')()
 let responseData=require('./Data/ResponseData/ResponseData')()
-
+require('dotenv').config()
+let PORT=process.env.PORT
 app.use(cors())
 app.get('/',(req,res)=>{
     return res.status(200).json({msg:"success",status:200})
@@ -21,6 +22,6 @@ app.get("/response-data",(req,res)=>{
 app.get("/check-out",(req,res)=>{
     res.status(200).json(checkOut)
 })
-app.listen(5555,()=>{
+app.listen(PORT,()=>{
     
 })
