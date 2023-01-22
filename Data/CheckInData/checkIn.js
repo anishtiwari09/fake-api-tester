@@ -19,7 +19,7 @@ function checkInData() {
     student_instruction5: null,
     activity_data: [
       {
-        category_id: 25,
+        category_id: 21,
         name: "I am unique",
         image:
           "https://check-in-activity.s3.ap-south-1.amazonaws.com/unique_girl.png",
